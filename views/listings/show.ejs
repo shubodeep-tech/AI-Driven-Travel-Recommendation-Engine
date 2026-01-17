@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listing Details</title>
+</head>
+<body>
+
+<h3><%= listing.title %></h3>
+
+<p><%= listing.description %></p>
+<p>₹ <%= listing.price %></p>
+<p><%= listing.location %>, <%= listing.country %></p>
+
+<a href="/listings/<%= listing._id %>/edit">Edit this listing</a>
+<br><br>
+
+<form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
+    <button>Delete this listing</button>
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Listing</title>
+</head>
+<body>
+
+<h3>Add New Listing</h3>
+
+<form method="POST" action="/listings">
+  <input name="listing[title]" placeholder="Title" type="text" required />
+  <br><br>
+
+  <textarea name="listing[description]" placeholder="Description" required></textarea>
+  <br><br>
+
+  <input name="listing[image]" placeholder="Image URL" type="text" />
+  <br><br>
+
+  <input name="listing[price]" placeholder="Price" type="number" required />
+  <br><br>
+
+  <input name="listing[country]" placeholder="Country" type="text" required />
+  <br><br>
+
+  <input name="listing[location]" placeholder="Location" type="text" required />
+  <br><br>
+
+  <button>Add</button>
+</form>
+
+</body>
+</html>
