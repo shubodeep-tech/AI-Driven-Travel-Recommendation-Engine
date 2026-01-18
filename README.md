@@ -51,3 +51,24 @@ Files Updated
 	•	controllers/
 	•	models/
 	•	views/
+
+Day 3 – UI Layout & Styling (Wanderlust)
+
+Work Done
+	•	Created main boilerplate layout using EJS
+	•	Added reusable navbar component
+	•	Added reusable footer component
+	•	Integrated Bootstrap for UI styling
+	•	Linked Google Font (Plus Jakarta Sans)
+	•	Applied global CSS styling
+	•	Styled listings index page (card layout)
+	•	Styled new listing form
+	•	Styled edit listing form
+	•	Styled show listing page
+
+Concepts Used
+	•	EJS layouts (ejs-mate)
+	•	Partials (navbar, footer)
+	•	Bootstrap grid system
+	•	Custom CSS
+	•	Responsive design basics
