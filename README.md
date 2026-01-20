@@ -48,7 +48,7 @@ Delete
 
 Files Updated
 	•	routes/
-	•	controllers/
+	•	listing/
 	•	models/
 	•	views/
 
@@ -64,7 +64,7 @@ Work Done
 	•	Styled listings index page (card layout)
 	•	Styled new listing form
 	•	Styled edit listing form
-	•	Styled show listing page
+	•	Styled show listing pages
 
 Concepts Used
 	•	EJS layouts (ejs-mate)
