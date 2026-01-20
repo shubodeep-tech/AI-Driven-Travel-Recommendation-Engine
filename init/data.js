@@ -348,5 +348,4 @@ const sampleListings = [
     country: "Costa Rica",
   },
 ];
-
 module.exports = { data: sampleListings };
