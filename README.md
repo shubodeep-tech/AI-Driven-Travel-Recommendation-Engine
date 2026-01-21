@@ -73,7 +73,7 @@ Concepts Used
 	•	Responsive design basics
 
 
-	Day 4 – Error Handling & Validation
+Day 4 – Error Handling & Validation
 
 Progress
 	•	Implemented client-side form validation
@@ -103,3 +103,36 @@ Files Updated / Added
 	•	middleware/validation.js (schema validation)
 	•	public/js/script.js
 	•	app.js
+
+Day 5 – Reviews & Mongoose Middleware
+
+Progress
+	•	Implemented Mongoose middleware
+	•	Created Review model
+	•	Added client-side validation for reviews
+	•	Integrated reviews with listings
+
+What I Worked On
+	•	Designed and created a Review schema and model using Mongoose
+	•	Linked reviews to listings using ObjectId references
+	•	Used Mongoose middleware to handle review-related logic
+	•	Added client-side validation for review forms
+	•	Ensured invalid review submissions are blocked on the client side
+	•	Improved error handling for review operations
+
+Concepts Used
+	•	Mongoose Schema & Model
+	•	One-to-Many Relationships (Listing → Reviews)
+	•	Mongoose Middleware (pre / post hooks)
+	•	Client-side Form Validation
+	•	Express Routes for Nested Resources
+	•	Data Integrity & Validation Flow
+
+Files Updated / Added
+	•	models/review.js
+	•	models/listing.js
+	•	public/js/script.js
+	•	views/listings/show.ejs
+	•	app.js (or routes/controllers related to reviews)
+
+⸻
