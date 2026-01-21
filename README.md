@@ -47,7 +47,6 @@ Delete
 ⸻
 
 Files Updated
-	•	routes/
 	•	listing/
 	•	models/
 	•	views/
@@ -72,3 +71,35 @@ Concepts Used
 	•	Bootstrap grid system
 	•	Custom CSS
 	•	Responsive design basics
+
+
+	Day 4 – Error Handling & Validation
+
+Progress
+	•	Implemented client-side form validation
+	•	Added success and failure feedback messages
+	•	Created custom error handling flow
+	•	Added server-side validation middleware
+
+What I Worked On
+	•	Built client-side validation using Bootstrap feedback
+	•	Handled invalid form submissions gracefully
+	•	Created a custom ExpressError class for centralized error handling
+	•	Implemented server-side error handling middleware
+	•	Added schema-based validation middleware to validate request data
+	•	Managed validation errors with meaningful error messages
+
+Concepts Used
+	•	Custom Error Class (ExpressError)
+	•	Express Error Handling Middleware
+	•	Client-side Form Validation
+	•	Server-side Schema Validation (Middleware)
+	•	Centralized Error Flow
+	•	Clean MVC-friendly error handling structure
+
+Files Updated / Added
+	•	utils/expressError.js
+	•	utils/wrapAsync.js
+	•	middleware/validation.js (schema validation)
+	•	public/js/script.js
+	•	app.js
