@@ -11,7 +11,7 @@
   <div class="col-6 offset-3 show-card">
             <div class="card listing-card">
                  <img 
-                 src=" <%= listing.image.url %>" 
+                 src="<%= listing.image.url %>" 
                  class="card-img-top shoe-img" alt="listing_image"
                  />
                 <div class="card-body">
@@ -73,9 +73,32 @@
         ></textarea>
         <div class="invalid-feedback">Please submit some comments for review</div>
       </div>
-
       <button class="btn btn-outline-dark">Submit</button>
     </form>
-  </div>
 
+
+    <hr />
+
+    <h4><b>All Reviews</b></h4>
+
+<% if (listing.reviews.length === 0) { %>
+  <p>No reviews yet</p>
+<% } else { %>
+  <% for (let review of listing.reviews) { %>
+    <div class="card col-5 ms-3 mb-3">
+      <div class="card-body">
+        <h5 class="card-title">John Doe</h5>
+        <p class="card-text"><%= review.comment %></p>
+        <p class="card-text"><%= review.rating %> stars</p>
+      </div>
+
+      <form
+        method="POST"
+        action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+      >
+        <button class="btn btn-sm btn-dark">Delete</button>
+      </form>
+    </div>
+  <% } %>
+<% } %>
 </div>
