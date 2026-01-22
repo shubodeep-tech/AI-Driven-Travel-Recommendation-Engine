@@ -136,3 +136,64 @@ Files Updated / Added
 	•	public/js/script.js
 	•	views/listings/show.ejs
 	•	app.js (or related routes/controllers)
+
+Day 6 – Reviews, Validation & Router Refactoring
+
+What I worked on
+	•	Implemented validation for review data using Joi schema
+	•	Rendered reviews on listing show page
+	•	Added UI styling for reviews section
+	•	Implemented delete review functionality
+	•	Added middleware for review validation and deletion handling
+	•	Refactored routes using Express Router
+
+⸻
+
+Review Features
+	•	Create review for a listing
+	•	Display all reviews under a listing
+	•	Validate review input before saving to database
+	•	Delete review by review ID
+	•	Remove review reference from listing using $pull
+
+⸻
+
+Validation & Middleware
+	•	Used Joi to validate review data
+	•	Created validateReview middleware
+	•	Centralized error handling using custom ExpressError
+	•	Prevented invalid data from reaching database
+
+⸻
+
+Routing Improvements
+	•	Used express.Router() for cleaner code
+	•	Separated listing routes and review routes
+	•	Used mergeParams: true to access listing ID in reviews
+	•	Reduced code duplication and improved maintainability
+
+⸻
+
+Files Updated
+	•	routes/listing.js
+	•	routes/reviews.js
+	•	models/reviews.js
+	•	schema.js
+	•	views/listings/show.ejs
+	•	public/css/style.css
+
+⸻
+
+Concepts Used
+	•	Express Router
+	•	Middleware chaining
+	•	Joi validation
+	•	Mongoose relations
+	•	Error handling middleware
+	•	RESTful routing
+
+Key Learning
+	•	Middleware helps control request flow
+	•	Validation is required before database operations
+	•	Route restructuring improves scalability
+	•	Proper router usage avoids complex route bugs
