@@ -28,33 +28,53 @@ router.get("/new", (req, res) => {
   res.render("listings/new");
 });
 
+// SHOW (ALWAYS LAST)
+router.get("/:id", wrapAsync(async (req, res) => {
+  const listing = await Listing.findById(req.params.id).populate("reviews");
+  if (!listing) {
+    req.flash("error","Listing you requeted for does not exist! ");
+    res.direct("/listings");
+  }
+  res.render("listings/show", { listing });
+}));
+
 // CREATE
 router.post("/", validateListing, wrapAsync(async (req, res) => {
   const newListing = new Listing(req.body.listing);
   await newListing.save();
+  req.flash("success","New Listing Created!");
   res.redirect(`/listings/${newListing._id}`);
 }));
 
 // UPDATE
 router.put("/:id", validateListing, wrapAsync(async (req, res) => {
   await Listing.findByIdAndUpdate(req.params.id, req.body.listing);
+  req.flash("success", "Listing updated successfully!");
   res.redirect(`/listings/${req.params.id}`);
 }));
 
 // EDIT
 router.get("/:id/edit", wrapAsync(async (req, res) => {
   const listing = await Listing.findById(req.params.id);
-  if (!listing) throw new ExpressError(404, "Listing not found");
+  if (!listing) {
+     req.flash("error","Listing you requested for does not exist! ");
+     req.redirect("/listings")
+
+  }
+
   res.render("listings/edit", { listing });
 }));
 
+// DELETE
+router.delete("/:id", wrapAsync(async (req, res) => {
+  const { id } = req.params;
 
-
-// SHOW (ALWAYS LAST)
-router.get("/:id", wrapAsync(async (req, res) => {
-  const listing = await Listing.findById(req.params.id).populate("reviews");
-  if (!listing) throw new ExpressError(404, "Listing not found");
-  res.render("listings/show", { listing });
+  await Listing.findByIdAndDelete(id);
+  req.flash("success", "Listing deleted successfully!");
+  res.redirect("/listings");
 }));
+
+
+
 
 module.exports = router;
