@@ -1,4 +1,4 @@
-# AI Driven Travel Recommendation Engine
+AI Powered Travel Recommendation Engine
 
 MERN stack project inspired AI intregrated
 
