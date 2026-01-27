@@ -282,3 +282,73 @@ Example:
 
 Learning:
 	•	Avoid passing same data to every res.render()
+
+
+
+Day 8 – Authentication (Signup & Login)
+
+What I Worked On
+	•	Implemented user authentication system
+	•	Created User model using Passport-Local-Mongoose
+	•	Configured Passport local strategy
+	•	Implemented Signup and Login functionality
+	•	Tested authentication flow with demo users
+
+⸻
+
+Features Implemented
+
+User Model
+	•	Created User schema with username and email
+	•	Integrated passport-local-mongoose
+	•	Password hashing and salting handled automatically
+	•	Added authentication-related methods to User model
+
+Passport Configuration
+	•	Configured Passport local strategy
+	•	Initialized Passport and session handling
+	•	Connected Passport with Express sessions
+	•	Implemented serializeUser and deserializeUser
+
+Signup (Register User)
+	•	GET route to render signup form
+	•	POST route to register new users
+	•	Used User.register() for secure user creation
+	•	Handled duplicate user and validation errors
+	•	Redirected user after successful signup
+
+Login
+	•	GET route to render login form
+	•	POST route to authenticate user
+	•	Used Passport authenticate() middleware
+	•	Managed login success and failure messages
+	•	Created demo login user for testing
+
+⸻
+
+Concepts Learned
+	•	Authentication vs Authorization
+	•	Passport.js basics
+	•	Passport-Local strategy
+	•	Password hashing and security
+	•	Session-based authentication
+	•	How login and signup flow works in backend
+	•	Error handling in authentication
+
+⸻
+
+Files/Modules Used
+	•	passport
+	•	passport-local
+	•	passport-local-mongoose
+	•	express-session
+	•	connect-flash
+	•	User model
+	•	Auth routes (signup, login)
+
+⸻
+
+Outcome
+	•	Secure signup and login system implemented
+	•	User authentication working with sessions
+	•	Ready to add authorization and protected routes next
